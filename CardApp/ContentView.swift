@@ -24,7 +24,7 @@ struct ContentView: View {
                         .frame(width: 300.0, height: 133)
                         .shadow(radius: 3)
                         .rotation3DEffect(.degrees(isJapanese ? 0 : 180),axis: (x: 0,y: 1,z: 0))
-                        .animation(.spring())
+                        .animation(.easeInOut)
                         .onTapGesture {
                             self.isJapanese.toggle()
                     }
@@ -36,7 +36,7 @@ struct ContentView: View {
                         Button(action: {
                             self.isJapanese.toggle()
                         }){
-                            Image(systemName: "arow.2.circlepath")
+                            Image(systemName: "arrow.2.circlepath")
                             Text(/*@START_MENU_TOKEN@*/"裏返す"/*@END_MENU_TOKEN@*/)
                         }
                         Button(action: {
